@@ -1,0 +1,3411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ridhi Sood | Portfolio</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           VARIABLES
+        ====================================================== */
+
+        :root {
+
+            --navy: #071832;
+
+            --navy-light: #10264b;
+
+            --yellow: #f7c928;
+
+            --yellow-light: #fff5c7;
+
+            --cream: #faf9f4;
+
+            --white: #ffffff;
+
+            --grey: #6c7280;
+
+            --border: #e8e8e3;
+
+        }
+
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            font-family: "DM Sans", sans-serif;
+
+            color: var(--navy);
+
+            background: var(--cream);
+
+            overflow-x: hidden;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+
+        }
+
+
+        section {
+
+            padding: 110px 8%;
+
+        }
+
+
+        .container {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ====================================================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 76px;
+
+            background: rgba(250, 249, 244, 0.94);
+
+            backdrop-filter: blur(16px);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 0 7%;
+
+            z-index: 1000;
+
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+
+        }
+
+
+        .logo {
+
+            font-size: 23px;
+
+            font-weight: 700;
+
+            letter-spacing: -0.5px;
+
+        }
+
+
+        .logo span {
+
+            color: var(--yellow);
+
+        }
+
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+        }
+
+
+        nav a {
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            color: #343a46;
+
+            position: relative;
+
+        }
+
+
+        nav a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -8px;
+
+            width: 0;
+
+            height: 2px;
+
+            background: var(--yellow);
+
+            transition: 0.3s;
+
+        }
+
+
+        nav a:hover::after,
+
+        nav a.active::after {
+
+            width: 100%;
+
+        }
+
+
+        .resume-nav {
+
+            background: var(--navy);
+
+            color: white;
+
+            padding: 11px 18px;
+
+            border-radius: 25px;
+
+        }
+
+
+        .resume-nav::after {
+
+            display: none;
+
+        }
+
+
+        .menu {
+
+            display: none;
+
+            font-size: 23px;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding-top: 120px;
+
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 450px;
+
+            height: 450px;
+
+            border-radius: 50%;
+
+            background: rgba(247, 201, 40, 0.09);
+
+            right: -150px;
+
+            top: 100px;
+
+        }
+
+
+        .hero-content {
+
+            width: 52%;
+
+            z-index: 2;
+
+        }
+
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: #9a7410;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .eyebrow::before {
+
+            content: "";
+
+            width: 28px;
+
+            height: 2px;
+
+            background: var(--yellow);
+
+        }
+
+
+        .hero h1 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(55px, 7vw, 88px);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--yellow);
+
+        }
+
+
+        .hero-title {
+
+            font-size: clamp(25px, 3vw, 38px);
+
+            font-weight: 600;
+
+            line-height: 1.25;
+
+            max-width: 650px;
+
+        }
+
+
+        .hero-title span {
+
+            color: #777;
+
+        }
+
+
+        .hero-description {
+
+            max-width: 620px;
+
+            margin-top: 22px;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            color: var(--grey);
+
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 14px;
+
+            margin-top: 32px;
+
+        }
+
+
+        .btn {
+
+            padding: 14px 23px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+
+        }
+
+
+        .btn-primary {
+
+            background: var(--navy);
+
+            color: white;
+
+        }
+
+
+        .btn-primary:hover {
+
+            transform: translateY(-3px);
+
+            background: var(--navy-light);
+
+        }
+
+
+        .btn-outline {
+
+            border: 1px solid #c8c8c2;
+
+            background: white;
+
+        }
+
+
+        .btn-outline:hover {
+
+            transform: translateY(-3px);
+
+            border-color: var(--navy);
+
+        }
+
+
+        .socials {
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-top: 30px;
+
+        }
+
+
+        .socials a {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            border-radius: 50%;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            transition: 0.3s;
+
+        }
+
+
+        .socials a:hover {
+
+            background: var(--navy);
+
+            color: white;
+
+            transform: translateY(-4px);
+
+        }
+
+
+        /* =====================================================
+           HERO PHOTO
+        ====================================================== */
+
+        .hero-photo {
+
+            width: 48%;
+
+            display: flex;
+
+            justify-content: center;
+
+            z-index: 2;
+
+            position: relative;
+
+        }
+
+
+        .photo-circle {
+
+            width: 400px;
+
+            height: 400px;
+
+            border-radius: 50%;
+
+            background: var(--yellow);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: flex-end;
+
+            overflow: hidden;
+
+            box-shadow: 0 25px 70px rgba(7,24,50,0.12);
+
+        }
+
+
+        .photo-circle img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center 32%;
+
+            transition: 0.5s;
+
+        }
+
+
+        .photo-circle:hover img {
+
+            transform: scale(1.03);
+
+        }
+
+
+        .exploring {
+
+            position: absolute;
+
+            bottom: -8px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            background: white;
+
+            padding: 15px 24px;
+
+            border-radius: 16px;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+
+            width: 280px;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            color: var(--grey);
+
+        }
+
+
+        .exploring strong {
+
+            display: block;
+
+            margin-top: 5px;
+
+            color: var(--navy);
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           SECTION HEADINGS
+        ====================================================== */
+
+        .section-label {
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+
+            color: #b28700;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .section-heading {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 48px;
+
+            letter-spacing: -1px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .section-subtitle {
+
+            color: var(--grey);
+
+            font-size: 15px;
+
+            max-width: 620px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ====================================================== */
+
+        .about {
+
+            background: white;
+
+        }
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .about-text p {
+
+            color: var(--grey);
+
+            line-height: 1.9;
+
+            font-size: 16px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .about-highlight {
+
+            margin-top: 28px;
+
+            border-left: 3px solid var(--yellow);
+
+            padding-left: 20px;
+
+            font-weight: 600;
+
+            line-height: 1.7;
+
+        }
+
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+        }
+
+
+        .stat {
+
+            background: var(--cream);
+
+            border: 1px solid var(--border);
+
+            padding: 28px 20px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            transition: 0.3s;
+
+        }
+
+
+        .stat:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+
+        }
+
+
+        .stat h3 {
+
+            font-size: 31px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .stat p {
+
+            color: var(--grey);
+
+            font-size: 12px;
+
+        }
+
+
+        /* =====================================================
+           STRENGTHS
+        ====================================================== */
+
+        .strengths {
+
+            background: var(--cream);
+
+        }
+
+
+        .strength-grid {
+
+            margin-top: 45px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .strength {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            border: 1px solid var(--border);
+
+            transition: 0.3s;
+
+        }
+
+
+        .strength:hover {
+
+            transform: translateY(-6px);
+
+        }
+
+
+        .strength-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: var(--yellow-light);
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .strength h3 {
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .strength p {
+
+            color: var(--grey);
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           EXPERIENCE
+        ====================================================== */
+
+        .experience {
+
+            background: white;
+
+        }
+
+
+        .timeline {
+
+            margin-top: 55px;
+
+            max-width: 950px;
+
+            position: relative;
+
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 14px;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 1px;
+
+            background: #d9d9d2;
+
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            padding-left: 60px;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .timeline-dot {
+
+            position: absolute;
+
+            left: 7px;
+
+            top: 5px;
+
+            width: 15px;
+
+            height: 15px;
+
+            background: var(--yellow);
+
+            border-radius: 50%;
+
+            border: 4px solid white;
+
+            box-shadow: 0 0 0 1px #ddd;
+
+        }
+
+
+        .timeline-date {
+
+            font-size: 12px;
+
+            color: #9a7410;
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .timeline-item h3 {
+
+            font-size: 21px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .timeline-role {
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: var(--navy-light);
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .timeline-item p {
+
+            color: var(--grey);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            max-width: 750px;
+
+        }
+
+
+        /* =====================================================
+           PROJECT
+        ====================================================== */
+
+        .projects {
+
+            background: var(--cream);
+
+        }
+
+
+        .project-card {
+
+            margin-top: 50px;
+
+            background: var(--navy);
+
+            color: white;
+
+            border-radius: 25px;
+
+            padding: 45px;
+
+            display: grid;
+
+            grid-template-columns: 0.8fr 1.2fr;
+
+            gap: 50px;
+
+            overflow: hidden;
+
+            position: relative;
+
+        }
+
+
+        .project-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 280px;
+
+            height: 280px;
+
+            background: rgba(247,201,40,0.09);
+
+            border-radius: 50%;
+
+            right: -100px;
+
+            top: -100px;
+
+        }
+
+
+        .project-number {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 100px;
+
+            color: var(--yellow);
+
+        }
+
+
+        .project-card h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 34px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .project-card p {
+
+            color: #ccd3df;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .project-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+        }
+
+
+        .project-tag {
+
+            padding: 7px 12px;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,0.08);
+
+            font-size: 11px;
+
+        }
+
+
+        /* =====================================================
+           EDUCATION
+        ====================================================== */
+
+        .education {
+
+            background: white;
+
+        }
+
+
+        .education-card {
+
+            margin-top: 45px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            transition: 0.3s;
+
+        }
+
+
+        .education-card:hover {
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+
+        }
+
+
+        .education-year {
+
+            color: #a17a08;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .education-card h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .education-card p {
+
+            color: var(--grey);
+
+            font-size: 14px;
+
+        }
+
+
+        .cgpa {
+
+            background: var(--yellow-light);
+
+            padding: 18px 25px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+        }
+
+
+        .cgpa strong {
+
+            display: block;
+
+            font-size: 25px;
+
+        }
+
+
+        .cgpa span {
+
+            font-size: 11px;
+
+            color: var(--grey);
+
+        }
+
+
+        /* =====================================================
+           SKILLS
+        ====================================================== */
+
+        .skills {
+
+            background: var(--cream);
+
+        }
+
+
+        .skills-list {
+
+            margin-top: 40px;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+        }
+
+
+        .skill {
+
+            padding: 12px 18px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 30px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .skill:hover {
+
+            background: var(--navy);
+
+            color: white;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           LEADERSHIP
+        ====================================================== */
+
+        .leadership {
+
+            background: white;
+
+        }
+
+
+        .leadership-grid {
+
+            margin-top: 45px;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .leadership-card {
+
+            padding: 28px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .leadership-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: var(--yellow);
+
+        }
+
+
+        .leadership-card h3 {
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .leadership-card .role {
+
+            color: #a27c0c;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .leadership-card p {
+
+            color: var(--grey);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           HIGHLIGHTS
+        ====================================================== */
+
+        .achievements {
+
+            background: var(--navy);
+
+            color: white;
+
+        }
+
+
+        .achievements .section-label {
+
+            color: var(--yellow);
+
+        }
+
+
+        .achievements .section-heading {
+
+            color: white;
+
+        }
+
+
+        .achievements .section-subtitle {
+
+            color: #bfc7d6;
+
+        }
+
+
+        .achievement-grid {
+
+            margin-top: 40px;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .achievement {
+
+            padding: 28px;
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            border-radius: 18px;
+
+            color: #d8deea;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+
+            display: flex;
+
+            gap: 18px;
+
+            align-items: flex-start;
+
+            background: rgba(255,255,255,0.025);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .achievement:hover {
+
+            transform: translateY(-6px);
+
+            border-color: rgba(247,201,40,0.5);
+
+            background: rgba(255,255,255,0.05);
+
+        }
+
+
+        .achievement i {
+
+            color: var(--yellow);
+
+            font-size: 21px;
+
+            margin-top: 3px;
+
+            min-width: 22px;
+
+        }
+
+
+        .achievement strong {
+
+            color: white;
+
+            font-size: 16px;
+
+        }
+
+
+        .achievement p {
+
+            color: #bfc7d6;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            margin-top: 8px;
+
+        }
+
+
+        .highlight-tag {
+
+            display: inline-block;
+
+            margin-top: 12px;
+
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            background: rgba(247,201,40,0.10);
+
+            color: var(--yellow);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.3px;
+
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ====================================================== */
+
+        .contact {
+
+            background: var(--cream);
+
+            text-align: center;
+
+        }
+
+
+        .contact .section-subtitle {
+
+            margin: auto;
+
+        }
+
+
+        .contact-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 35px;
+
+        }
+
+
+        .contact-button {
+
+            padding: 14px 22px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 30px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .contact-button:hover {
+
+            background: var(--navy);
+
+            color: white;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            background: var(--navy);
+
+            color: white;
+
+            padding: 25px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 12px;
+
+        }
+
+
+        footer span {
+
+            color: var(--yellow);
+
+        }
+
+
+        /* =====================================================
+           REVEAL ANIMATION
+        ====================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(25px);
+
+            transition: 0.8s ease;
+
+        }
+
+
+        .reveal.show {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media(max-width: 1100px) {
+
+            nav {
+
+                gap: 17px;
+
+            }
+
+            nav a {
+
+                font-size: 12px;
+
+            }
+
+        }
+
+
+        @media(max-width: 950px) {
+
+            nav {
+
+                display: none;
+
+                position: absolute;
+
+                top: 76px;
+
+                right: 5%;
+
+                width: 240px;
+
+                background: white;
+
+                padding: 25px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                border-radius: 15px;
+
+                box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+            }
+
+
+            nav.show {
+
+                display: flex;
+
+            }
+
+
+            .menu {
+
+                display: block;
+
+            }
+
+
+            .hero {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+
+            .hero-content,
+            .hero-photo {
+
+                width: 100%;
+
+            }
+
+
+            .hero-photo {
+
+                margin-top: 60px;
+
+            }
+
+
+            .hero-buttons,
+            .socials {
+
+                justify-content: center;
+
+            }
+
+
+            .about-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .strength-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .project-card {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media(max-width: 650px) {
+
+            section {
+
+                padding: 80px 6%;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 55px;
+
+            }
+
+
+            .photo-circle {
+
+                width: 290px;
+
+                height: 290px;
+
+            }
+
+
+            .stats {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .leadership-grid,
+            .achievement-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .education-card {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 20px;
+
+            }
+
+
+            .achievement {
+
+                padding: 22px;
+
+            }
+
+
+            footer {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+                text-align: center;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+
+    <a href="#home"
+       class="logo">
+
+        Ridhi<span>.</span>
+
+    </a>
+
+
+    <nav id="nav">
+
+
+        <a href="#home"
+           class="active">
+
+            Home
+
+        </a>
+
+
+        <a href="#about">
+
+            About
+
+        </a>
+
+
+        <a href="#experience">
+
+            Experience
+
+        </a>
+
+
+        <a href="#project">
+
+            Project
+
+        </a>
+
+
+        <a href="#education">
+
+            Education
+
+        </a>
+
+
+        <a href="#skills">
+
+            Skills
+
+        </a>
+
+
+        <a href="#leadership">
+
+            Leadership
+
+        </a>
+
+
+        <a href="#highlights">
+
+            Highlights
+
+        </a>
+
+
+        <a href="#contact">
+
+            Contact
+
+        </a>
+
+
+        <!-- LOCAL RESUME PDF -->
+
+        <a href="Ridhi_Sood_Resume.pdf"
+           target="_blank"
+           class="resume-nav">
+
+            Resume
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+        </a>
+
+    </nav>
+
+
+    <div class="menu"
+         onclick="toggleMenu()">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero"
+         id="home">
+
+
+    <div class="container"
+         style="display:flex;align-items:center;width:100%;">
+
+
+        <div class="hero-content reveal">
+
+
+            <div class="eyebrow">
+
+                Electronics × Technology × Problem Solving
+
+            </div>
+
+
+            <h1>
+
+                Hi, I'm <span>Ridhi.</span>
+
+            </h1>
+
+
+            <div class="hero-title">
+
+                Electronics & Instrumentation
+
+                <span>Engineering student.</span>
+
+            </div>
+
+
+            <p class="hero-description">
+
+                Passionate about electronics, embedded systems,
+                data analysis, computer vision and building
+                practical technology-driven solutions.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <a href="#project"
+                   class="btn btn-primary">
+
+                    View My Work
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <!-- LOCAL RESUME -->
+
+                <a href="Ridhi_Sood_Resume.pdf"
+                   target="_blank"
+                   class="btn btn-outline">
+
+                    View Resume
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="socials">
+
+
+                <!-- EMAIL -->
+
+                <a href="mailto:ridhisood2211@gmail.com"
+                   title="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
+                <!-- GITHUB -->
+
+                <a href="https://github.com/RidhiSood22"
+                   target="_blank"
+                   title="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <!-- CONTACT -->
+
+                <a href="#contact"
+                   title="Contact">
+
+                    <i class="fa-solid fa-address-card"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO -->
+
+        <div class="hero-photo reveal">
+
+
+            <div class="photo-circle">
+
+                <!--
+                    Put your photo in the same folder
+                    and name it:
+
+                    profile.jpg
+                -->
+
+                <img src="profile.jpg"
+                     alt="Ridhi Sood">
+
+            </div>
+
+
+            <div class="exploring">
+
+                Currently exploring
+
+                <strong>
+
+                    Technology • Data • AI • Consulting
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about"
+         id="about">
+
+
+    <div class="container">
+
+
+        <div class="about-grid">
+
+
+            <div class="about-text reveal">
+
+
+                <div class="section-label">
+
+                    About Me
+
+                </div>
+
+
+                <h2 class="section-heading">
+
+                    Who I am
+
+                </h2>
+
+
+                <p>
+
+                    I am an Electronics & Instrumentation
+                    Engineering student with a strong foundation
+                    in electronics, programming and analytical
+                    problem-solving.
+
+                </p>
+
+
+                <p>
+
+                    My experience includes electronics quality
+                    assurance at Bharat Electronics Limited and
+                    protection and energy management at Satluj
+                    Jal Vidyut Nigam.
+
+                </p>
+
+
+                <div class="about-highlight">
+
+                    I enjoy combining technical knowledge,
+                    analytical thinking and creativity to build
+                    practical solutions.
+
+                </div>
+
+            </div>
+
+
+            <div class="stats reveal">
+
+
+                <div class="stat">
+
+                    <h3>8.87</h3>
+
+                    <p>CGPA</p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3>100+</h3>
+
+                    <p>Systems Validated</p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3>2</h3>
+
+                    <p>Technical Internships</p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3>1</h3>
+
+                    <p>Featured Project</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STRENGTHS
+===================================================== -->
+
+<section class="strengths">
+
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            What I Bring
+
+        </div>
+
+
+        <h2 class="section-heading">
+
+            My strengths
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            A combination of technical knowledge,
+            analytical thinking and creative execution.
+
+        </p>
+
+
+        <div class="strength-grid">
+
+
+            <div class="strength reveal">
+
+
+                <div class="strength-icon">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                </div>
+
+
+                <h3>
+
+                    Technical Depth
+
+                </h3>
+
+
+                <p>
+
+                    Electronics, PCB design, embedded systems,
+                    MATLAB, LabVIEW, Arduino and computer vision.
+
+                </p>
+
+            </div>
+
+
+            <div class="strength reveal">
+
+
+                <div class="strength-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+
+                <h3>
+
+                    Analytical Thinking
+
+                </h3>
+
+
+                <p>
+
+                    Data analysis, SQL, Excel and Tableau
+                    combined with structured problem-solving.
+
+                </p>
+
+            </div>
+
+
+            <div class="strength reveal">
+
+
+                <div class="strength-icon">
+
+                    <i class="fa-solid fa-pen-nib"></i>
+
+                </div>
+
+
+                <h3>
+
+                    Creative Leadership
+
+                </h3>
+
+
+                <p>
+
+                    Storytelling, event management, communication,
+                    creative thinking and leadership.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section class="experience"
+         id="experience">
+
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Experience
+
+        </div>
+
+
+        <h2 class="section-heading">
+
+            Professional journey
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Applying engineering knowledge to real-world
+            systems, quality assurance and power networks.
+
+        </p>
+
+
+        <div class="timeline">
+
+
+            <!-- BEL -->
+
+            <div class="timeline-item reveal">
+
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-date">
+
+                    Jun 2025 – Jul 2025
+
+                </div>
+
+
+                <h3>
+
+                    Bharat Electronics Limited
+
+                </h3>
+
+
+                <div class="timeline-role">
+
+                    Intern – Electronics & Quality Assurance Division
+
+                </div>
+
+
+                <p>
+
+                    Performed quality inspection and validation
+                    on 100+ Star-V and HVDLF Fin Gun systems,
+                    ensuring compliance with defense-grade
+                    reliability standards.
+
+                    Handled and verified Channel Keys for secure
+                    encrypted communication, improving traceability
+                    and authentication workflow.
+
+                </p>
+
+            </div>
+
+
+            <!-- SJVN -->
+
+            <div class="timeline-item reveal">
+
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-date">
+
+                    Dec 2024 – Jan 2025
+
+                </div>
+
+
+                <h3>
+
+                    Satluj Jal Vidyut Nigam (SJVN)
+
+                </h3>
+
+
+                <div class="timeline-role">
+
+                    Intern – Protection and Energy Management Department
+
+                </div>
+
+
+                <p>
+
+                    Analyzed power protection mechanisms including
+                    relay coordination, circuit breaker response
+                    logic and grid-fault identification to assess
+                    system stability.
+
+                    Assisted in evaluating load distribution,
+                    fault clearance windows and optimization
+                    strategies for large-scale power networks.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECT
+===================================================== -->
+
+<section class="projects"
+         id="project">
+
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Featured Work
+
+        </div>
+
+
+        <h2 class="section-heading">
+
+            My project
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            A hardware and software project combining
+            electronics, IR imaging and computer vision.
+
+        </p>
+
+
+        <div class="project-card reveal">
+
+
+            <div>
+
+
+                <div class="project-number">
+
+                    01
+
+                </div>
+
+
+                <div class="project-tags">
+
+
+                    <span class="project-tag">
+
+                        Python
+
+                    </span>
+
+
+                    <span class="project-tag">
+
+                        OpenCV
+
+                    </span>
+
+
+                    <span class="project-tag">
+
+                        Raspberry Pi
+
+                    </span>
+
+
+                    <span class="project-tag">
+
+                        IR Imaging
+
+                    </span>
+
+
+                    <span class="project-tag">
+
+                        Computer Vision
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+
+                <h3>
+
+                    AI-Based Portable Autorefractor
+                    for Eye Screening
+
+                </h3>
+
+
+                <p>
+
+                    Developed a low-cost AI-powered portable
+                    eye-screening device by integrating Raspberry Pi,
+                    IR imaging and computer vision for objective
+                    refractive error detection.
+
+                </p>
+
+
+                <p>
+
+                    Implemented Python and OpenCV algorithms for
+                    automated pupil detection and image analysis,
+                    enabling rapid, non-invasive vision screening
+                    in a portable prototype.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section class="education"
+         id="education">
+
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Education
+
+        </div>
+
+
+        <h2 class="section-heading">
+
+            Academic background
+
+        </h2>
+
+
+        <!-- COLLEGE -->
+
+        <div class="education-card reveal">
+
+
+            <div>
+
+
+                <div class="education-year">
+
+                    Aug 2023 – Jun 2027
+
+                </div>
+
+
+                <h3>
+
+                    B.E. Electronics
+                    (Instrumentation and Control) Engineering
+
+                </h3>
+
+
+                <p>
+
+                    Thapar Institute of Engineering and Technology
+
+                </p>
+
+            </div>
+
+
+            <div class="cgpa">
+
+                <strong>
+
+                    8.87
+
+                </strong>
+
+
+                <span>
+
+                    CGPA
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- 12TH -->
+
+        <div class="education-card reveal">
+
+
+            <div>
+
+
+                <div class="education-year">
+
+                    May 2023
+
+                </div>
+
+
+                <h3>
+
+                    12th Grade
+
+                </h3>
+
+
+                <p>
+
+                    St. Xavier's Sr. Sec. School, Chandigarh
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10TH -->
+
+        <div class="education-card reveal">
+
+
+            <div>
+
+
+                <div class="education-year">
+
+                    Jul 2021
+
+                </div>
+
+
+                <h3>
+
+                    10th Grade
+
+                </h3>
+
+
+                <p>
+
+                    Auckland House School, Shimla
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section class="skills"
+         id="skills">
+
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Skills
+
+        </div>
+
+
+        <h2 class="section-heading">
+
+            Technical toolkit
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Skills and tools from my resume.
+
+        </p>
+
+
+        <div class="skills-list reveal">
+
+
+            <span class="skill">Electronics</span>
+
+            <span class="skill">PCB Design</span>
+
+            <span class="skill">Embedded Systems</span>
+
+            <span class="skill">MATLAB</span>
+
+            <span class="skill">LabVIEW</span>
+
+            <span class="skill">Arduino</span>
+
+            <span class="skill">OpenCV</span>
+
+            <span class="skill">C / C++</span>
+
+            <span class="skill">Python</span>
+
+            <span class="skill">SQL</span>
+
+            <span class="skill">Tableau</span>
+
+            <span class="skill">Excel</span>
+
+            <span class="skill">Data Analysis</span>
+
+            <span class="skill">Storytelling</span>
+
+            <span class="skill">Event Management</span>
+
+            <span class="skill">Communication</span>
+
+            <span class="skill">Creative Thinking</span>
+
+            <span class="skill">Leadership</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LEADERSHIP
+===================================================== -->
+
+<section class="leadership"
+         id="leadership">
+
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Leadership & Activities
+
+        </div>
+
+
+        <h2 class="section-heading">
+
+            Beyond academics
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Experiences that strengthened my leadership,
+            communication and creative skills.
+
+        </p>
+
+
+        <div class="leadership-grid">
+
+
+            <!-- BIS -->
+
+            <div class="leadership-card reveal">
+
+
+                <h3>
+
+                    Bureau of Indian Standards (BIS)
+
+                </h3>
+
+
+                <div class="role">
+
+                    Joint Secretary · Jan 2026 – Aug 2026
+
+                </div>
+
+
+                <p>
+
+                    Organized expert talks and workshops with
+                    BIS Parwanoo Branch; managed end-to-end
+                    coordination, logistics and promotions.
+
+                    Promoted awareness of standardization practices
+                    and their applications in engineering.
+
+                </p>
+
+            </div>
+
+
+            <!-- IEI DESIGN HEAD -->
+
+            <div class="leadership-card reveal">
+
+
+                <h3>
+
+                    Institution of Engineers India
+
+                </h3>
+
+
+                <div class="role">
+
+                    Design Head · Oct 2025 – Aug 2026
+
+                </div>
+
+
+                <p>
+
+                    Led the design team for IEI events and
+                    publications, ensuring brand consistency
+                    and impactful communication.
+
+                    Designed creatives and motion graphics
+                    for Orion, increasing visibility and registrations.
+
+                </p>
+
+            </div>
+
+
+            <!-- IEI CORE -->
+
+            <div class="leadership-card reveal">
+
+
+                <h3>
+
+                    Institution of Engineers India
+
+                </h3>
+
+
+                <div class="role">
+
+                    Core Member · Aug 2024 – Oct 2025
+
+                </div>
+
+
+                <p>
+
+                    Assisted in designing event materials
+                    and collaborated with senior team members
+                    on publications.
+
+                </p>
+
+            </div>
+
+
+            <!-- TMC -->
+
+            <div class="leadership-card reveal">
+
+
+                <h3>
+
+                    Thapar Movie Club
+
+                </h3>
+
+
+                <div class="role">
+
+                    Core Member · Jul 2024 – Aug 2025
+
+                </div>
+
+
+                <p>
+
+                    Designed promotional graphics and social
+                    media content while collaborating on
+                    event campaigns.
+
+                </p>
+
+            </div>
+
+
+            <!-- GIRLUP -->
+
+            <div class="leadership-card reveal">
+
+
+                <h3>
+
+                    GirlUp Society
+
+                </h3>
+
+
+                <div class="role">
+
+                    Core Member · Oct 2023 – Dec 2024
+
+                </div>
+
+
+                <p>
+
+                    Promoted for exemplary contribution;
+                    managed cross-team coordination and
+                    facilitated smooth event execution.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CERTIFICATIONS & HIGHLIGHTS
+===================================================== -->
+
+<section class="achievements"
+         id="highlights">
+
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Certifications & Highlights
+
+        </div>
+
+
+        <h2 class="section-heading">
+
+            A few highlights
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Experiences and certifications that reflect my
+            analytical, professional and leadership skills.
+
+        </p>
+
+
+        <div class="achievement-grid">
+
+
+            <!-- =================================================
+                 DELOITTE
+            ================================================== -->
+
+            <div class="achievement reveal">
+
+
+                <i class="fa-solid fa-chart-column"></i>
+
+
+                <div>
+
+
+                    <strong>
+
+                        Deloitte Data Analytics Job Simulation
+
+                    </strong>
+
+
+                    <p>
+
+                        Completed a Data Analytics Job Simulation
+                        in July 2026, working on practical tasks
+                        in data analysis and forensic technology.
+
+                    </p>
+
+
+                    <span class="highlight-tag">
+
+                        Certificate of Completion · July 2026
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 JETRO
+            ================================================== -->
+
+            <div class="achievement reveal">
+
+
+                <i class="fa-solid fa-handshake"></i>
+
+
+                <div>
+
+
+                    <strong>
+
+                        JETRO Regional Internship & Career Fair 2026
+
+                    </strong>
+
+
+                    <p>
+
+                        Volunteered at the JETRO Regional Internship
+                        & Career Fair 2026, contributing to the
+                        successful execution of the event.
+
+                    </p>
+
+
+                    <span class="highlight-tag">
+
+                        Volunteer · 2026
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 THAPAR SUMMER SCHOOL
+            ================================================== -->
+
+            <div class="achievement reveal">
+
+
+                <i class="fa-solid fa-certificate"></i>
+
+
+                <div>
+
+
+                    <strong>
+
+                        Machine Learning & Deep Learning
+
+                    </strong>
+
+
+                    <p>
+
+                        Certified in the Six-Week Thapar Summer
+                        School Training Program on Machine Learning
+                        and Deep Learning.
+
+                    </p>
+
+
+                    <span class="highlight-tag">
+
+                        Certification
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 BUSINESS QUIZ
+            ================================================== -->
+
+            <div class="achievement reveal">
+
+
+                <i class="fa-solid fa-trophy"></i>
+
+
+                <div>
+
+
+                    <strong>
+
+                        Business Quiz – First Prize
+
+                    </strong>
+
+
+                    <p>
+
+                        Achieved First Prize in Business Quiz at
+                        St. Xavier's Sr. Sec. School.
+
+                    </p>
+
+
+                    <span class="highlight-tag">
+
+                        First Prize
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact"
+         id="contact">
+
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Let's Connect
+
+        </div>
+
+
+        <h2 class="section-heading">
+
+            Have an opportunity?
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            I'm open to meaningful opportunities,
+            collaborations and conversations.
+
+        </p>
+
+
+        <div class="contact-buttons">
+
+
+            <!-- EMAIL -->
+
+            <a href="mailto:ridhisood2211@gmail.com"
+               class="contact-button">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Email Me
+
+            </a>
+
+
+            <!-- GITHUB -->
+
+            <a href="https://github.com/RidhiSood22"
+               target="_blank"
+               class="contact-button">
+
+                <i class="fa-brands fa-github"></i>
+
+                GitHub
+
+            </a>
+
+
+            <!-- RESUME -->
+
+            <a href="Ridhi_Sood_Resume.pdf"
+               target="_blank"
+               class="contact-button">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Resume
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div>
+
+        Ridhi<span>.</span>
+
+    </div>
+
+
+    <div>
+
+        © 2026 Ridhi Sood
+
+    </div>
+
+
+    <div>
+
+        ridhisood2211@gmail.com
+
+    </div>
+
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+    /* =====================================================
+       MOBILE MENU
+    ====================================================== */
+
+    function toggleMenu() {
+
+        document
+            .getElementById("nav")
+            .classList
+            .toggle("show");
+
+    }
+
+
+    /* =====================================================
+       SCROLL REVEAL
+    ====================================================== */
+
+    const observer =
+
+        new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target
+                            .classList
+                            .add("show");
+
+                    }
+
+                });
+
+            },
+
+            {
+
+                threshold: 0.12
+
+            }
+
+        );
+
+
+    document
+        .querySelectorAll(".reveal")
+        .forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+
+    /* =====================================================
+       ACTIVE NAVIGATION
+    ====================================================== */
+
+    const sections =
+        document.querySelectorAll("section");
+
+
+    const links =
+        document.querySelectorAll("nav a");
+
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            let current = "";
+
+
+            sections.forEach(section => {
+
+                const sectionTop =
+                    section.offsetTop - 150;
+
+
+                if (
+                    window.scrollY >= sectionTop
+                ) {
+
+                    current =
+                        section.getAttribute("id");
+
+                }
+
+            });
+
+
+            links.forEach(link => {
+
+                link.classList.remove("active");
+
+
+                if (
+                    link.getAttribute("href")
+                    === "#" + current
+                ) {
+
+                    link.classList.add("active");
+
+                }
+
+            });
+
+        }
+    );
+
+
+    /* =====================================================
+       CLOSE MOBILE MENU
+    ====================================================== */
+
+    document
+        .querySelectorAll("nav a")
+        .forEach(link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    document
+                        .getElementById("nav")
+                        .classList
+                        .remove("show");
+
+                }
+            );
+
+        });
+
+
+</script>
+
+
+</body>
+
+</html>
