@@ -981,10 +981,11 @@
 
         }
 
-
         .project-card {
 
-            margin-top: 50px;
+            margin-top: 35px;
+
+            min-height: 310px;
 
             background: var(--navy);
 
@@ -992,7 +993,7 @@
 
             border-radius: 25px;
 
-            padding: 45px;
+            padding: 40px 45px;
 
             display: grid;
 
@@ -1006,6 +1007,61 @@
 
         }
 
+        .project-card + .project-card {
+
+            margin-top: 25px;
+
+        }
+
+        .project-image {
+
+            width: 100%;
+
+            margin-top: 25px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+        .project-image img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: 0.4s ease;
+
+        }
+
+        .project-image:hover img {
+
+            transform: scale(1.03);
+
+        }
+
+        .project-links {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 22px;
+
+        }
 
         .project-card::after {
 
@@ -1695,6 +1751,12 @@
 
             }
 
+            .project-image img {
+
+                height: 200px;
+
+            }
+
         }
 
 
@@ -2102,7 +2164,7 @@
 
                 <div class="stat">
 
-                    <h3>8.87</h3>
+                    <h3>8.72</h3>
 
                     <p>CGPA</p>
 
@@ -2129,9 +2191,9 @@
 
                 <div class="stat">
 
-                    <h3>1</h3>
+                    <h3>2</h3>
 
-                    <p>Featured Project</p>
+                    <p>Featured Projects</p>
 
                 </div>
 
@@ -2418,24 +2480,27 @@
 
         <h2 class="section-heading">
 
-            My project
+            My projects
 
         </h2>
 
 
         <p class="section-subtitle">
 
-            A hardware and software project combining
-            electronics, IR imaging and computer vision.
+            Selected projects combining engineering,
+            data analytics, computer vision and technology-driven problem solving.
 
         </p>
 
+
+        <!-- =================================================
+             PROJECT 01 — AUTORREFRACTOR
+        ================================================== -->
 
         <div class="project-card reveal">
 
 
             <div>
-
 
                 <div class="project-number">
 
@@ -2446,39 +2511,24 @@
 
                 <div class="project-tags">
 
-
                     <span class="project-tag">
-
                         Python
-
                     </span>
 
-
                     <span class="project-tag">
-
                         OpenCV
-
                     </span>
 
-
                     <span class="project-tag">
-
                         Raspberry Pi
-
                     </span>
 
-
                     <span class="project-tag">
-
                         IR Imaging
-
                     </span>
 
-
                     <span class="project-tag">
-
                         Computer Vision
-
                     </span>
 
                 </div>
@@ -2487,7 +2537,6 @@
 
 
             <div>
-
 
                 <h3>
 
@@ -2520,7 +2569,105 @@
 
         </div>
 
+
+        <!-- =================================================
+             PROJECT 02 — NETFLIX TABLEAU DASHBOARD
+        ================================================== -->
+
+        <div class="project-card reveal">
+
+
+            <div>
+
+                <div class="project-number">
+
+                    02
+
+                </div>
+
+
+                <div class="project-tags">
+
+                    <span class="project-tag">
+                        Tableau
+                    </span>
+
+                    <span class="project-tag">
+                        Data Analytics
+                    </span>
+
+                    <span class="project-tag">
+                        Data Visualization
+                    </span>
+
+                    <span class="project-tag">
+                        EDA
+                    </span>
+
+                </div>
+
+
+                <div class="project-image">
+
+                    <img
+                        src="Netflix dashboard.png"
+                        alt="Netflix Content Analytics Dashboard"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Netflix Content Analytics Dashboard
+
+                </h3>
+
+
+                <p>
+
+                    Built an interactive Tableau dashboard analyzing
+                    Netflix's global content library across countries,
+                    genres, ratings, content types and release years.
+
+                </p>
+
+
+                <p>
+
+                    Developed visual insights using interactive filters,
+                    geographic analysis, rating distributions and
+                    content trends to understand Netflix's catalog
+                    composition and growth.
+
+                </p>
+
+
+                <div class="project-links">
+
+                    <a
+    href="https://public.tableau.com/views/NetflixContentAnalyticsDashboard_17870800341260/Netflix?:language=en-US&:display_count=n&:origin=viz_share_link"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn project-dashboard-btn"
+>
+    View Live Dashboard
+    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
     </div>
+
 
 </section>
 
@@ -2586,7 +2733,7 @@
 
                 <strong>
 
-                    8.87
+                    8.72
 
                 </strong>
 
