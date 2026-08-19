@@ -981,167 +981,155 @@
 
         }
 
-        .project-card {
-
-            margin-top: 35px;
-
-            min-height: 310px;
-
-            background: var(--navy);
-
+        .projects {
+            background: #0b0b0b;
             color: white;
-
-            border-radius: 25px;
-
-            padding: 40px 45px;
-
-            display: grid;
-
-            grid-template-columns: 0.8fr 1.2fr;
-
-            gap: 50px;
-
-            overflow: hidden;
-
-            position: relative;
-
         }
 
-        .project-card + .project-card {
-
-            margin-top: 25px;
-
-        }
-
-        .project-image {
-
-            width: 100%;
-
-            margin-top: 25px;
-
-            border-radius: 18px;
-
-            overflow: hidden;
-
-            border: 1px solid rgba(255,255,255,0.10);
-
-            position: relative;
-
-            z-index: 2;
-
-        }
-
-        .project-image img {
-
-            width: 100%;
-
-            height: 220px;
-
-            object-fit: cover;
-
-            display: block;
-
-            transition: 0.4s ease;
-
-        }
-
-        .project-image:hover img {
-
-            transform: scale(1.03);
-
-        }
-
-        .project-links {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 12px;
-
-            margin-top: 22px;
-
-        }
-
-        .project-card::after {
-
-            content: "";
-
-            position: absolute;
-
-            width: 280px;
-
-            height: 280px;
-
-            background: rgba(247,201,40,0.09);
-
-            border-radius: 50%;
-
-            right: -100px;
-
-            top: -100px;
-
-        }
-
-
-        .project-number {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: 100px;
-
+        .projects .section-label {
             color: var(--yellow);
-
         }
 
-
-        .project-card h3 {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: 34px;
-
-            margin-bottom: 15px;
-
+        .projects .section-heading {
+            color: white;
         }
 
-
-        .project-card p {
-
-            color: #ccd3df;
-
-            line-height: 1.8;
-
-            font-size: 14px;
-
-            margin-bottom: 20px;
-
+        .projects .section-subtitle {
+            color: #bfc7d6;
         }
 
+        .project-grid {
+            margin-top: 38px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
 
-        .project-tags {
+        .project-tile {
+            display: block;
+            background: white;
+            color: var(--navy);
+            border-radius: 14px;
+            overflow: hidden;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
+        .project-tile:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.28);
+        }
+
+        .project-tile-media {
+            height: 260px;
+            background: #111827;
+            position: relative;
+            overflow: hidden;
             display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
+        .project-tile-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.45s ease;
+        }
+
+        .project-tile:hover .project-tile-media img {
+            transform: scale(1.04);
+        }
+
+        .project-tile-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 35px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(247,201,40,0.22), transparent 30%),
+                linear-gradient(135deg, #0b1d3a, #132c50);
+            color: white;
+        }
+
+        .project-tile-placeholder .project-number {
+            font-family: "Playfair Display", serif;
+            font-size: 92px;
+            line-height: 0.9;
+            color: var(--yellow);
+            margin-bottom: 18px;
+        }
+
+        .project-tile-placeholder span {
+            font-size: 13px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            opacity: 0.75;
+        }
+
+        .project-tile-content {
+            padding: 13px 16px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            min-height: 62px;
+        }
+
+        .project-tile-title {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .project-tile-arrow {
+            flex: 0 0 auto;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--yellow-light);
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            transition: 0.3s ease;
+        }
+
+        .project-tile:hover .project-tile-arrow {
+            background: var(--yellow);
+            transform: translateX(3px);
+        }
+
+        .project-tile-tags {
+            display: flex;
             flex-wrap: wrap;
-
-            gap: 8px;
-
+            gap: 6px;
+            margin-top: 8px;
         }
 
-
-        .project-tag {
-
-            padding: 7px 12px;
-
-            border-radius: 20px;
-
-            background: rgba(255,255,255,0.08);
-
-            font-size: 11px;
-
+        .project-tile-tag {
+            font-size: 9px;
+            font-weight: 700;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
         }
 
+        @media (max-width: 800px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-tile-media {
+                height: 230px;
+            }
+        }
 
         /* =====================================================
            EDUCATION
@@ -1830,7 +1818,7 @@
 
         }
 
-    </style>
+</style>
 
 </head>
 
@@ -1843,9 +1831,7 @@
 ===================================================== -->
 
 <header>
-
-
-    <a href="#home"
+<a href="#home"
        class="logo">
 
         Ridhi<span>.</span>
@@ -1921,8 +1907,7 @@
 
 
         <!-- LOCAL RESUME PDF -->
-
-        <a href="Ridhi_Sood_Resume.pdf"
+<a href="Ridhi_Sood_Resume.pdf"
            target="_blank"
            class="resume-nav">
 
@@ -2467,147 +2452,72 @@
 <section class="projects"
          id="project">
 
-
     <div class="container">
 
-
         <div class="section-label">
-
             Featured Work
-
         </div>
-
 
         <h2 class="section-heading">
-
-            My projects
-
+            Projects
         </h2>
 
-
         <p class="section-subtitle">
-
-            Selected projects combining engineering,
-            data analytics, computer vision and technology-driven problem solving.
-
+            Selected projects across computer vision, embedded systems and data analytics.
         </p>
 
+        <div class="project-grid">
 
-        <!-- =================================================
-             PROJECT 01 — AUTORREFRACTOR
-        ================================================== -->
+            <!-- PROJECT 01 -->
+            <a class="project-tile reveal"
+               href="AI-Based Portable Autorefractor for Eye Screening.pptx"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Open AI-Based Portable Autorefractor project"
+               title="Open AI-Based Portable Autorefractor presentation">
 
-        <div class="project-card reveal">
+                <div class="project-tile-media">
 
-
-            <div>
-
-                <div class="project-number">
-
-                    01
-
-                </div>
-
-
-                <div class="project-tags">
-
-                    <span class="project-tag">
-                        Python
-                    </span>
-
-                    <span class="project-tag">
-                        OpenCV
-                    </span>
-
-                    <span class="project-tag">
-                        Raspberry Pi
-                    </span>
-
-                    <span class="project-tag">
-                        IR Imaging
-                    </span>
-
-                    <span class="project-tag">
-                        Computer Vision
-                    </span>
+                    <img
+                        src="1st project photo.png"
+                        alt="OcuSmart AI-Powered Portable Autorefractor"
+                    >
 
                 </div>
 
-            </div>
+                <div class="project-tile-content">
 
+                    <div>
 
-            <div>
+                        <div class="project-tile-title">
+                            AI-Based Portable Autorefractor for Eye Screening
+                        </div>
 
-                <h3>
+                        <div class="project-tile-tags">
+                            <span class="project-tile-tag">Python</span>
+                            <span class="project-tile-tag">OpenCV</span>
+                            <span class="project-tile-tag">Raspberry Pi</span>
+                        </div>
 
-                    AI-Based Portable Autorefractor
-                    for Eye Screening
+                    </div>
 
-                </h3>
-
-
-                <p>
-
-                    Developed a low-cost AI-powered portable
-                    eye-screening device by integrating Raspberry Pi,
-                    IR imaging and computer vision for objective
-                    refractive error detection.
-
-                </p>
-
-
-                <p>
-
-                    Implemented Python and OpenCV algorithms for
-                    automated pupil detection and image analysis,
-                    enabling rapid, non-invasive vision screening
-                    in a portable prototype.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             PROJECT 02 — NETFLIX TABLEAU DASHBOARD
-        ================================================== -->
-
-        <div class="project-card reveal">
-
-
-            <div>
-
-                <div class="project-number">
-
-                    02
+                    <div class="project-tile-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
 
                 </div>
 
-
-                <div class="project-tags">
-
-                    <span class="project-tag">
-                        Tableau
-                    </span>
-
-                    <span class="project-tag">
-                        Data Analytics
-                    </span>
-
-                    <span class="project-tag">
-                        Data Visualization
-                    </span>
-
-                    <span class="project-tag">
-                        EDA
-                    </span>
-
-                </div>
+            </a>
 
 
-                <div class="project-image">
+            <!-- PROJECT 02 -->
+            <a class="project-tile reveal"
+               href="https://public.tableau.com/views/NetflixContentAnalyticsDashboard_17870800341260/Netflix?:language=en-US&:display_count=n&:origin=viz_share_link"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Open Netflix Content Analytics Dashboard">
+
+                <div class="project-tile-media">
 
                     <img
                         src="Netflix dashboard.png"
@@ -2616,58 +2526,33 @@
 
                 </div>
 
-            </div>
+                <div class="project-tile-content">
 
+                    <div>
 
-            <div>
+                        <div class="project-tile-title">
+                            Netflix Content Analytics Dashboard
+                        </div>
 
-                <h3>
+                        <div class="project-tile-tags">
+                            <span class="project-tile-tag">Tableau</span>
+                            <span class="project-tile-tag">Data Analytics</span>
+                            <span class="project-tile-tag">EDA</span>
+                        </div>
 
-                    Netflix Content Analytics Dashboard
+                    </div>
 
-                </h3>
-
-
-                <p>
-
-                    Built an interactive Tableau dashboard analyzing
-                    Netflix's global content library across countries,
-                    genres, ratings, content types and release years.
-
-                </p>
-
-
-                <p>
-
-                    Developed visual insights using interactive filters,
-                    geographic analysis, rating distributions and
-                    content trends to understand Netflix's catalog
-                    composition and growth.
-
-                </p>
-
-
-                <div class="project-links">
-
-                    <a
-    href="https://public.tableau.com/views/NetflixContentAnalyticsDashboard_17870800341260/Netflix?:language=en-US&:display_count=n&:origin=viz_share_link"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn project-dashboard-btn"
->
-    View Live Dashboard
-    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-</a>
+                    <div class="project-tile-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
 
                 </div>
 
-            </div>
+            </a>
 
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -2733,7 +2618,7 @@
 
                 <strong>
 
-                     8.87
+                    8.87
 
                 </strong>
 
@@ -2870,7 +2755,7 @@
 
             <span class="skill">C / C++</span>
 
-            <span class="skill">Multisim</span>
+            <span class="skill">Python</span>
 
             <span class="skill">SQL</span>
 
@@ -2932,120 +2817,83 @@
 
         <div class="leadership-grid">
 
+
             <!-- STUDENT PLACEMENT REPRESENTATIVE -->
 
-<div class="activity-card reveal">
+            <div class="leadership-card reveal">
 
-    <div>
 
-        <h3>Student Placement Representative (SPR)</h3>
+                <h3>
 
-        <p class="activity-meta">
-            Electronics (Instrumentation & Control) Branch · May 2026 – Present
-        </p>
+                    Student Placement Representative (SPR)
 
-        <p>
-            Coordinated campus recruitment activities for JETRO,
-            Bain & Company, BlackRock, and other recruiters,
-            facilitating communication among recruiters, placement
-            teams, and students throughout the hiring process.
-        </p>
+                </h3>
 
-    </div>
 
-</div>
+                <div class="role">
+
+                    Electronics (Instrumentation &amp; Control) Branch · May 2026 – Present
+
+                </div>
+
+
+                <p>
+
+                    Coordinated campus recruitment activities for JETRO,
+                    Bain &amp; Company, BlackRock, and other recruiters,
+                    facilitating communication among recruiters, placement
+                    teams, and students throughout the hiring process.
+
+                </p>
+
+            </div>
+
 
             <!-- BIS -->
 
             <div class="leadership-card reveal">
 
-
                 <h3>
-
                     Bureau of Indian Standards (BIS)
-
                 </h3>
 
-
                 <div class="role">
-
                     Joint Secretary · Jan 2026 – Aug 2026
-
                 </div>
 
-
                 <p>
-
-                    Organized expert talks and workshops with
-                    BIS Parwanoo Branch; managed end-to-end
-                    coordination, logistics and promotions.
-
-                    Promoted awareness of standardization practices
-                    and their applications in engineering.
-
+                    Organized expert talks and workshops, managing
+                    coordination, logistics, and promotions.
                 </p>
 
             </div>
 
 
-            <!-- IEI DESIGN HEAD -->
+            <!-- IEI -->
 
             <div class="leadership-card reveal">
 
-
                 <h3>
-
-                    Institution of Engineers India
-
+                    Institution of Engineers India (IEI)
                 </h3>
 
-
                 <div class="role">
-
                     Design Head · Oct 2025 – Aug 2026
-
                 </div>
 
-
                 <p>
-
-                    Led the design team for IEI events and
-                    publications, ensuring brand consistency
-                    and impactful communication.
-
-                    Designed creatives and motion graphics
-                    for Orion, increasing visibility and registrations.
-
+                    Led design initiatives, created event creatives
+                    and motion graphics, and contributed to Orion's
+                    visual communication.
                 </p>
 
-            </div>
-
-
-            <!-- IEI CORE -->
-
-            <div class="leadership-card reveal">
-
-
-                <h3>
-
-                    Institution of Engineers India
-
-                </h3>
-
-
-                <div class="role">
-
+                <div class="role" style="margin-top: 14px;">
                     Core Member · Aug 2024 – Oct 2025
-
                 </div>
 
-
                 <p>
-
-                    Assisted in designing event materials
-                    and collaborated with senior team members
-                    on publications.
-
+                    Supported event design, promotional content
+                    and IEI activities.
                 </p>
 
             </div>
@@ -3573,8 +3421,6 @@
 
 
 </script>
-
-
 </body>
 
 </html>
