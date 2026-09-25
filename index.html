@@ -1518,6 +1518,117 @@
         }
 
 
+
+        /* =====================================================
+           CERTIFICATE IMAGE
+        ====================================================== */
+
+        .certificate-image {
+            margin-top: 18px;
+            width: 100%;
+            max-width: 520px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: white;
+        }
+
+        .certificate-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: 0.4s ease;
+        }
+
+        .certificate-image:hover img {
+            transform: scale(1.02);
+        }
+
+
+        /* =====================================================
+           CLICKABLE CERTIFICATE VIEWER
+        ====================================================== */
+
+        .certificate-clickable {
+            cursor: pointer;
+        }
+
+        .certificate-clickable:focus-visible {
+            outline: 3px solid var(--yellow);
+            outline-offset: 4px;
+        }
+
+        .certificate-hint {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 11px;
+            color: var(--yellow);
+            font-weight: 700;
+        }
+
+        .certificate-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.88);
+            padding: 25px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .certificate-modal.show {
+            display: flex;
+        }
+
+        .certificate-modal-content {
+            position: relative;
+            width: min(1100px, 95vw);
+            max-height: 92vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .certificate-modal-content img {
+            display: block;
+            max-width: 100%;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.5);
+        }
+
+        .certificate-close {
+            position: absolute;
+            top: -18px;
+            right: -18px;
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 50%;
+            background: #fff;
+            color: var(--navy);
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 10000;
+        }
+
+        @media(max-width: 650px) {
+            .certificate-modal {
+                padding: 12px;
+            }
+
+            .certificate-close {
+                top: -8px;
+                right: 0;
+            }
+        }
+
         /* =====================================================
            CONTACT
         ====================================================== */
@@ -2164,7 +2275,7 @@
 
                 <div class="stat">
 
-                    <h3>8.72</h3>
+                    <h3>8.87</h3>
 
                     <p>CGPA</p>
 
@@ -2733,7 +2844,7 @@
 
                 <strong>
 
-                    8.72
+                    8.87
 
                 </strong>
 
@@ -3130,163 +3241,124 @@
 
         <div class="achievement-grid">
 
-
-            <!-- =================================================
-                 DELOITTE
-            ================================================== -->
-
-            <div class="achievement reveal">
-
+            <!-- Deloitte -->
+<div class="achievement reveal certificate-clickable"
+     data-certificate="deloitte Virtual internship certificate_page-0001.jpg"
+     data-certificate-title="Deloitte Data Analytics Job Simulation"
+     role="button"
+     tabindex="0">
 
                 <i class="fa-solid fa-chart-column"></i>
 
-
                 <div>
-
-
-                    <strong>
-
-                        Deloitte Data Analytics Job Simulation
-
-                    </strong>
-
+                    <strong>Deloitte Data Analytics Job Simulation</strong>
 
                     <p>
-
-                        Completed a Data Analytics Job Simulation
-                        in July 2026, working on practical tasks
-                        in data analysis and forensic technology.
-
+                        Completed a Data Analytics Job Simulation in July 2026,
+                        working on practical tasks in data analysis and forensic technology.
                     </p>
 
-
                     <span class="highlight-tag">
-
                         Certificate of Completion · July 2026
-
                     </span>
 
+                    <span class="certificate-hint">Click to view certificate</span>
                 </div>
-
             </div>
 
-
-            <!-- =================================================
-                 JETRO
-            ================================================== -->
-
-            <div class="achievement reveal">
-
+            <!-- JETRO -->
+<div class="achievement reveal certificate-clickable"
+     data-certificate="Jetro Certificate.jpeg"
+     data-certificate-title="JETRO Regional Internship & Career Fair 2026"
+     role="button"
+     tabindex="0">
 
                 <i class="fa-solid fa-handshake"></i>
 
-
                 <div>
-
-
-                    <strong>
-
-                        JETRO Regional Internship & Career Fair 2026
-
-                    </strong>
-
+                    <strong>JETRO Regional Internship & Career Fair 2026</strong>
 
                     <p>
-
-                        Volunteered at the JETRO Regional Internship
-                        & Career Fair 2026, contributing to the
-                        successful execution of the event.
-
+                        Volunteered at the JETRO Regional Internship & Career Fair 2026,
+                        contributing to the successful execution of the event.
                     </p>
 
+                    <span class="highlight-tag">Volunteer · 2026</span>
 
-                    <span class="highlight-tag">
-
-                        Volunteer · 2026
-
-                    </span>
-
+                    <span class="certificate-hint">Click to view certificate</span>
                 </div>
-
             </div>
 
-
-            <!-- =================================================
-                 THAPAR SUMMER SCHOOL
-            ================================================== -->
-
-            <div class="achievement reveal">
-
+            <!-- Machine Learning -->
+<div class="achievement reveal certificate-clickable"
+     data-certificate="Summer school Certificate.jpeg"
+     data-certificate-title="Machine Learning & Deep Learning"
+     role="button"
+     tabindex="0">
 
                 <i class="fa-solid fa-certificate"></i>
 
-
                 <div>
-
-
-                    <strong>
-
-                        Machine Learning & Deep Learning
-
-                    </strong>
-
+                    <strong>Machine Learning & Deep Learning</strong>
 
                     <p>
-
-                        Certified in the Six-Week Thapar Summer
-                        School Training Program on Machine Learning
-                        and Deep Learning.
-
+                        Successfully participated in the Six Weeks Training Program
+                        on Machine Learning and Deep Learning, held from 10 June
+                        to 19 July 2024.
                     </p>
 
+                    <span class="highlight-tag">Certificate of Participation · 2024</span>
 
-                    <span class="highlight-tag">
-
-                        Certification
-
-                    </span>
-
+                    <span class="certificate-hint">Click to view certificate</span>
                 </div>
-
             </div>
 
+            <!-- Microsoft Excel -->
+<div class="achievement reveal certificate-clickable"
+     data-certificate="Microsoft Excel Beginner to Advance course certificate.png"
+     data-certificate-title="Microsoft Excel — Beginners to Advance"
+     role="button"
+     tabindex="0">
 
-            <!-- =================================================
-                 BUSINESS QUIZ
-            ================================================== -->
+                <i class="fa-solid fa-file-excel"></i>
 
-            <div class="achievement reveal">
+                <div>
+                    <strong>Microsoft Excel — Beginners to Advance</strong>
 
+                    <p>
+                        Completed the Microsoft Excel Beginners to Advance course,
+                        covering Excel skills from foundational to advanced level.
+                    </p>
+
+                    <span class="highlight-tag">
+                        Certificate of Completion · 24 September 2026
+                    </span>
+
+                    <span class="certificate-hint">Click to view certificate</span>
+                </div>
+            </div>
+
+            <!-- Business Quiz -->
+<div class="achievement reveal certificate-clickable"
+     data-certificate="Business Quiz Certificate.png"
+     data-certificate-title="Business Quiz — First Prize"
+     role="button"
+     tabindex="0">
 
                 <i class="fa-solid fa-trophy"></i>
 
-
                 <div>
-
-
-                    <strong>
-
-                        Business Quiz – First Prize
-
-                    </strong>
-
+                    <strong>Business Quiz – First Prize</strong>
 
                     <p>
-
                         Achieved First Prize in Business Quiz at
                         St. Xavier's Sr. Sec. School.
-
                     </p>
 
+                    <span class="highlight-tag">First Prize</span>
 
-                    <span class="highlight-tag">
-
-                        First Prize
-
-                    </span>
-
+                    <span class="certificate-hint">Click to view certificate</span>
                 </div>
-
             </div>
 
         </div>
@@ -3295,6 +3367,20 @@
 
 </section>
 
+
+
+    <!-- =====================================================
+         CERTIFICATE VIEWER MODAL
+    ====================================================== -->
+
+    <div class="certificate-modal" id="certificateModal" aria-hidden="true">
+        <div class="certificate-modal-content">
+            <button class="certificate-close"
+                    id="certificateClose"
+                    aria-label="Close certificate">&times;</button>
+            <img id="certificateModalImage" src="" alt="Certificate">
+        </div>
+    </div>
 
 <!-- =====================================================
      CONTACT
@@ -3469,6 +3555,59 @@
 
         });
 
+
+    /* =====================================================
+       CERTIFICATE VIEWER
+    ====================================================== */
+
+    const certificateModal = document.getElementById("certificateModal");
+    const certificateModalImage = document.getElementById("certificateModalImage");
+    const certificateClose = document.getElementById("certificateClose");
+
+    function openCertificate(card) {
+        const imagePath = card.getAttribute("data-certificate");
+        const title = card.getAttribute("data-certificate-title") || "Certificate";
+
+        if (!imagePath) return;
+
+        certificateModalImage.src = imagePath;
+        certificateModalImage.alt = title;
+        certificateModal.classList.add("show");
+        certificateModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeCertificate() {
+        certificateModal.classList.remove("show");
+        certificateModal.setAttribute("aria-hidden", "true");
+        certificateModalImage.removeAttribute("src");
+        document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll(".certificate-clickable").forEach(card => {
+        card.addEventListener("click", () => openCertificate(card));
+
+        card.addEventListener("keydown", event => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openCertificate(card);
+            }
+        });
+    });
+
+    certificateClose.addEventListener("click", closeCertificate);
+
+    certificateModal.addEventListener("click", event => {
+        if (event.target === certificateModal) {
+            closeCertificate();
+        }
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && certificateModal.classList.contains("show")) {
+            closeCertificate();
+        }
+    });
 
     /* =====================================================
        ACTIVE NAVIGATION
