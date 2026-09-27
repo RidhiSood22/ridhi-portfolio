@@ -1014,6 +1014,24 @@ footer {
     section {
         padding: 80px 6%;
     }
+    /* FIX: Keep every main section on its own row */
+body {
+    display: block;
+    width: 100%;
+}
+
+section {
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+#project,
+#education {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
 
     .hero h1 {
         font-size: 55px;
